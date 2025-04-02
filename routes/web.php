@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UserController;
@@ -35,6 +36,9 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
     Route::put('/projects/update/{id}', [ProjectController::class, 'update'])->name('projects.update');
     Route::get('/projects/delete/{id}', [ProjectController::class, 'delete'])->name('projects.delete');
+
+    Route::resource('/employees', EmployeeController::class);
+
 });
 
 Route::middleware([UserMiddleware::class])->group(function () {

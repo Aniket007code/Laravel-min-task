@@ -6,9 +6,6 @@
 
     <a href="{{ route('projects.create') }}" class="btn btn-success mb-3">Create Project</a>
 
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
 
     <table class="table table-bordered">
         <thead>

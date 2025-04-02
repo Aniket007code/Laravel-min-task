@@ -46,7 +46,7 @@
 
     <div class="text-center mt-4">
         <a href="/listProject" class="btn btn-success">Create Project</a>
-        <a href="/create-employee" class="btn btn-primary">Create Employee</a>
+        <a href="/employees" class="btn btn-primary">Create Employee</a>
         <a href="/assign-project" class="btn btn-warning">Assign Project</a>
     </div>
 
