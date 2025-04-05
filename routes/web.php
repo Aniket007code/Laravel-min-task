@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AssignProjectController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -50,6 +51,9 @@ Route::middleware([AdminMiddleware::class])->group(function () {
 
 
 });
+
+Route::get('/chat', [ChatController::class, 'show'])->name('chat.show');
+Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
 
 Route::middleware([UserMiddleware::class])->group(function () {
     // Route::get('/user/dashboard', function () {
