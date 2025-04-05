@@ -5,6 +5,7 @@
     <h2 class="text-center">Project List</h2>
 
     <a href="{{ route('projects.create') }}" class="btn btn-success mb-3">Create Project</a>
+    <a href="/admin/dashboard" class="btn btn-primary mb-3">Back</a>
 
 
     <table class="table table-bordered">

@@ -4,7 +4,11 @@
 <div class="container">
     <h2 class="text-center">Employee List</h2>
 
-    <a href="{{ route('employees.create') }}" class="btn btn-success mb-3">Create Project</a>
+    <div class="conatiner" style="display:flex; justify-content: space-between;align-items: center;margin:20px">
+        <a href="{{ route('employees.create') }}" class="btn btn-success mb-3">Create Project</a>
+
+        <a href="/admin/dashboard" class="btn btn-primary mb-3">Back</a>
+    </div>
 
 
     <table class="table table-bordered">

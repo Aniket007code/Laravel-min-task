@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AssignProjectController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -38,6 +39,15 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/projects/delete/{id}', [ProjectController::class, 'delete'])->name('projects.delete');
 
     Route::resource('/employees', EmployeeController::class);
+
+    Route::get('/assign-project', [AssignProjectController::class, 'index'])->name('assignProjects.index');
+    Route::get('/assignedProjects/create', [AssignProjectController::class, 'create'])->name('assignedProjects.create');
+    Route::post('/assignedProjects/store', [AssignProjectController::class, 'store'])->name('assignedProjects.store');
+    Route::get('/assignedProjects/edit/{id}', [AssignProjectController::class, 'edit'])->name('assignedProjects.edit');
+    Route::post('/assignedProjects/update/{id}', [AssignProjectController::class, 'update'])->name('assignedProjects.update');
+    Route::get('/assignedProjects/delete/{id}', [AssignProjectController::class, 'delete'])->name('assignedProjects.delete');
+
+
 
 });
 
